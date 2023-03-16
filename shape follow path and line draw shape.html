@@ -1,0 +1,68 @@
+<html>
+  <head>
+    <title></title>
+    <style>
+    body{background-color: rgb(0,0,255);
+         display: flex ;
+    } 
+    </style>
+  </head>
+  <body>
+    
+   <svg height="200px" width="200px" >
+  <path class="star" d="M100,0 125,50 200,0 150,100 200,200 100,130 0,200 50,100 0,0 75,50 z"
+    stroke="yellow "
+    stroke-width="5"
+    fill="black" 
+     />
+     <circle class="rojo" cx="0" cy="0" r="10" fill="red" />
+</svg>
+<style>
+.rojo{
+  offset-path:path("M100,0 125,50 200,0 150,100 200,200 100,130 0,200 50,100 0,0 75,50 z") ;
+  animation: followpath 5s 1s linear infinite;
+} 
+@keyframes followpath {
+  from {
+    offset-distance:0%;
+  }
+  to {
+    offset-distance: 100%;
+  }
+}
+.star{
+         stroke-dasharray: 990;
+         stroke-dashoffset: 990;
+         animation:estrella 5s 1s linear forwards ;
+             }
+   @keyframes estrella{
+              from{stroke-dashoffset:990;fill:transparent ;} 
+              to  {stroke-dashoffset: 0;fill:transform;} 
+   } 
+</style>
+
+<svg class=" square"height=" 200px"width=" 200px">
+    <g fill="none"transform="translate(0,0)">
+     <path class=" squarepath"
+           d="M5,5 195,5 195,195 5,195 Z"
+           transform="rotate(0 50 50)"
+           style="stroke:white;
+                  stroke-width: 5px;
+                  fill:none;
+                  "/>
+    </g>
+   </svg> 
+   <style>
+  .squarepath{
+         stroke-dasharray: 760;
+         stroke-dashoffset: 760;
+         animation:dibujar 16s 11.7s linear forwards ;
+             }
+   @keyframes dibujar{
+              from{stroke-dashoffset:760;fill:transparent ;} 
+              to  {stroke-dashoffset: 0;fill:green;} 
+   } 
+   </style>
+
+  </body>
+</html> 

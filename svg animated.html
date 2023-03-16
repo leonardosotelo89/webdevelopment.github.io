@@ -1,0 +1,260 @@
+<html>
+  <head>
+    <title>svg animation</title>
+    <style>
+    body{background-color: rgb(0,0,255);
+         display: flex ;
+    } 
+    figcaption{background:linear-gradient(to bottom ,white , blue );
+               color:blue ;width:200px;height:50px ;
+               border-top-left-radius: 25px;
+               border-top-right-radius: 25px;
+               border-bottom-left-radius: 25px;
+               border-bottom-right-radius: 25px;
+               text-align: center;
+    } 
+   .character{
+     background:radial-gradient(circle at 50% 50%, white 15%, blue 80%);
+   }
+  .cuerpo{visibility:visible ;animation:tambaleo 5s 2s linear infinite }
+  .leftarm{visibility:visible ;animation:left 5s 2s linear infinite}
+  .rightarm{visibility:visible ;animation:right 5s 2s linear infinite}
+ .up{ animation:parpadoarriba 2s 1s infinite ; }
+ .down{ animation:parpadoabajo 2s 1s infinite ; }
+.secondeye{animation: ojo 2s 1s linear infinite ; }
+  @keyframes left{
+    from{transform-origin:30% 50%;transform:rotate(-150deg)} 
+    25% {transform-origin:30% 50%;transform:rotate(-150deg)} 
+    50% {transform-origin:30% 50%;transform:rotate(-22.5deg)} 
+    75% {transform-origin:30% 50%;transform:rotate(-150deg)} 
+    to  {transform-origin:30% 50%;transform:rotate(-150deg)} 
+  }
+  @keyframes right{
+    from{transform-origin:70% 50%;transform:rotate(150deg)} 
+    25% {transform-origin:70% 50%;transform:rotate(150deg)} 
+    50% {transform-origin:70% 50%;transform:rotate(22.5deg)} 
+    75% {transform-origin:70% 50%;transform:rotate(150deg)} 
+    to  {transform-origin:70% 50%;transform:rotate(150deg)} 
+  } 
+  @keyframes tambaleo{
+    from{transform-origin:50% 50%;transform:rotate(0deg)translate(0%,0%);} 
+    25% {transform-origin:50% 50%;transform:rotate(0deg)translate(0%,0%);} 
+    50% {transform-origin:50% 50%;transform:rotate(0deg)translate(0%,4%);} 
+    75% {transform-origin:50% 50%;transform:rotate(0deg)translate(0%,0%);} 
+    to  {transform-origin:50% 50%;transform:rotate(0deg)translate(0%,0%);} 
+  } 
+  @keyframes parpadoarriba{
+    from{transform:translate(0%,0%);} 
+    20% {transform:translate(0%,-8%);} 
+    40% {transform:translate(0%,-10%);} 
+    60% {transform:translate(0%,-10%);} 
+    80% {transform:translate(0%,-8%);} 
+    to  {transform:translate(0%,0%);} 
+  } 
+  @keyframes parpadoabajo{
+    from{transform:translate(0%,0%);} 
+    20% {transform:translate(0%,8%);} 
+    40% {transform:translate(0%,10%);} 
+    60% {transform:translate(0%,10%);} 
+    80% {transform:translate(0%,8%);} 
+    to  {transform:translate(0%,0%);} 
+  } 
+  @keyframes ojo{
+    from{transform:translate(0%,0%);} 
+    25% {transform:translate(-5%,0%);} 
+    40% {transform:translate(-2.5%,0%);} 
+    50% {transform:translate(0%,0%);} 
+    60% {transform:translate(2.5%,0%);} 
+    75% {transform:translate(5%,0%);} 
+    to  {transform:translate(0%,0%);} 
+  } 
+    </style>
+  </head>
+  <body>
+   <figure>
+      <svg class="character"height=" 200px"width=" 200px" viewBox="0 -10 200 200">
+        <g fill="none"transform="translate(0,0)">
+     <path class=" cuerpo"
+           d="M50,50 25,75 50,25 70,50 80,25 90,50 100,25 110,50 L120,25 130,50 150,25 175,75 150,50 S180,100 150,200 L110,200 Q110,150 100,150 90,150 90,200 L50,200 S20,100 50,50"
+           style="stroke:black ;
+                  stroke-width:1px;
+                  fill:purple;
+                  "
+                  >
+         <animate attributeName="d" 
+         values="M50,50 25,75 50,25 70,50 80,25 90,50 100,25 110,50 
+                 L120,25 130,50 150,25 175,75 150,50 
+                 S180,100 150,200 
+                 L110,200 
+                 Q110,150 100,150 90,150 90,200 
+                 L50,200 S20,100 50,50 ;
+                 M50,50 25,75 50,25 70,50 80,25 90,50 100,25 110,50 
+                 L120,25 130,50 150,25 175,75 150,50 
+                 S180,100 150,200 
+                 L110,200 
+                 Q110,150 100,150 90,150 90,200 
+                 L50,200 S20,100 50,50 ;
+                 M50,50 5,55 50,25 70,50 80,15 90,50 100,15 110,50 
+                 L120,15 130,50 150,25 195,55 150,50 
+                 S180,100 150,200 
+                 L110,200 
+                 Q110,150 100,150 90,150 90,200 
+                 L50,200 S20,100 50,50;
+                 M50,50 25,75 50,25 70,50 80,25 90,50 100,25 110,50 
+                 L120,25 130,50 150,25 175,75 150,50 
+                 S180,100 150,200 
+                 L110,200 
+                 Q110,150 100,150 90,150 90,200 
+                 L50,200 S20,100 50,50 ;"
+         dur="5s"  begin="2s" repeatCount="indefinite"
+         />
+        </path>
+    </g>
+    
+     <circle cx="100" cy="100" r="20" fill="white" />
+      <circle cx="100" cy="100" r="10" fill="magenta" />
+ <g fill="none"transform="translate(0,0)">
+     <path class=" up"
+           d="M80,80 120,80 120,100 80,100 z"
+           transform="rotate(0 50 50)"
+           style="stroke:none ;
+                  stroke-width:1px;
+                  fill:purple;
+                  "/>
+    </g>
+     <g fill="none"transform="translate(0,0)">
+     <path class=" down "
+           d="M80,100 120,100 120,120 80,120 z"
+           transform="rotate(0 50 50)"
+           style="stroke:none ;
+                  stroke-width:1px;
+                  fill:purple;
+                  "/>
+    </g>
+    
+        <g fill="none"transform="translate(0,0)">
+     <path class="leftarm"
+           d="M50,100 Q60,120 70,100 70,20 68,20 68,25 67,25 67,20 65,20 65,25 64,25 64,20 62,20 62,25 61,25 61,20 59,20 59,25 58,25 58,20 56,20 56,25 55,25 55,20 53,20 53,25 52,25 52,20 50,20 Z"
+           transform="rotate(-150 60 100)" 
+           style="stroke:black ;
+                  stroke-width:1px;
+                  fill:purple;
+                  "/>
+    </g>
+        <g fill="none"transform="translate(0,0)">
+     <path class=" rightarm"
+           d="M150,100 Q140,120 130,100 130,20 132,20 132,25 133,25 133,20 135,20 135,25 136,25 136,20 138,20 138,25 139,25 139,20 141,20 141,25 142,25 142,20 144,20 144,25 145,25 145,20 147,20 147,25 148,25 148,20 150,20 z"
+           transform="rotate(150 140 100)"
+           style="stroke:black ;
+                  stroke-width:1px;
+                  fill:purple;
+                  "/>
+    </g>
+     
+  </svg> <figcaption>Personaje animado</figcaption> </figure>
+   
+   <figure>
+    <svg class="character"height=" 200px"width=" 200px" viewBox="0 -10 200 200">
+        <g fill="none"transform="translate(0,0)">
+     <path class=" cuerpo"
+           d="M50,50 L25,75 Q50,25 70,50 80,25 90,50 Q100,25 110,50 120,25 130,50 Q150,25 175,75 L150,50 S180,100 150,200 L110,200 Q110,150 100,150 90,150 90,200 L50,200 S20,100 50,50"
+           style="stroke:black ;
+                  stroke-width:1px;
+                  fill:purple;
+                  "
+                  >
+         <animate attributeName="d" 
+         values="M50,50 
+                 L25,75 
+                 Q50,25 70,50 80,25 90,50 
+                 Q100,25 110,50 120,25 130,50 
+                 Q150,25 175,75 
+                 L150,50 
+                 S180,100 150,200 
+                 L110,200 
+                 Q110,150 100,150 90,150 90,200 
+                 L50,200 
+                 S20,100 50,50;
+                M50,50 
+                 L25,75 
+                 Q50,25 70,50 80,25 90,50 
+                 Q100,25 110,50 120,25 130,50 
+                 Q150,25 175,75 
+                 L150,50 
+                 S180,100 150,200 
+                 L110,200 
+                 Q110,150 100,150 90,150 90,200 
+                 L50,200 
+                 S20,100 50,50;
+                M50,50 
+                 L5,55 
+                 Q50,25 70,50 80,25 90,50 
+                 Q100,25 110,50 120,25 130,50 
+                 Q150,25 195,55 
+                 L150,50 
+                 S180,100 150,200 
+                 L110,200 
+                 Q110,150 100,150 90,150 90,200 
+                 L50,200 
+                 S20,100 50,50;
+                M50,50 
+                 L25,75 
+                 Q50,25 70,50 80,25 90,50 
+                 Q100,25 110,50 120,25 130,50 
+                 Q150,25 175,75 
+                 L150,50 
+                 S180,100 150,200 
+                 L110,200 
+                 Q110,150 100,150 90,150 90,200 
+                 L50,200 
+                 S20,100 50,50;"
+         dur="5s"  begin="2s" repeatCount="indefinite"
+         />
+        </path>
+    </g>
+    
+     <circle cx="100" cy="100" r="20" fill="white" />
+      <circle class="secondeye" cx="100" cy="100" r="10" fill="magenta" />
+  
+ <g fill="none"transform="translate(0,0)">
+     <path class=" up"
+           d="M80,80 120,80 120,100 80,100 z"
+           transform="rotate(0 50 50)"
+           style="stroke:none ;
+                  stroke-width:1px;
+                  fill:purple;
+                  "/>
+    </g>
+     <g fill="none"transform="translate(0,0)">
+     <path class=" down "
+           d="M80,100 120,100 120,120 80,120 z"
+           transform="rotate(0 50 50)"
+           style="stroke:none ;
+                  stroke-width:1px;
+                  fill:purple;
+                  "/>
+    </g>
+    
+        <g fill="none"transform="translate(0,0)">
+     <path class="leftarm"
+           d="M50,100 Q60,120 70,100 70,20 68,20 68,25 67,25 67,20 65,20 65,25 64,25 64,20 62,20 62,25 61,25 61,20 59,20 59,25 58,25 58,20 56,20 56,25 55,25 55,20 53,20 53,25 52,25 52,20 50,20 Z"
+           transform="rotate(-150 60 100)" 
+           style="stroke:black ;
+                  stroke-width:1px;
+                  fill:purple;
+                  "/>
+    </g>
+        <g fill="none"transform="translate(0,0)">
+     <path class=" rightarm"
+           d="M150,100 Q140,120 130,100 130,20 132,20 132,25 133,25 133,20 135,20 135,25 136,25 136,20 138,20 138,25 139,25 139,20 141,20 141,25 142,25 142,20 144,20 144,25 145,25 145,20 147,20 147,25 148,25 148,20 150,20 z"
+           transform="rotate(150 140 100)"
+           style="stroke:black ;
+                  stroke-width:1px;
+                  fill:purple;
+                  "/>
+    </g>
+   </svg>
+   <figcaption>oto personaje animado</figcaption></figure>
+    
+  </body>
+</html> 

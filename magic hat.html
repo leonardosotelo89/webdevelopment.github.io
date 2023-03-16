@@ -1,0 +1,192 @@
+<html>
+  <head>
+    <title>magic hat</title>
+  <style>
+    body{background-color: rgb(0,0,500);} 
+     .marquesina{ transform:translate(0%,150%);} 
+      .hatblack{
+        position:relative ;
+        background-color:none;
+        width:400px;
+        height:100px ;
+      } 
+ .magichat{
+   width: 250;
+   height: 250;
+   background-color:none;
+   position: relative ;
+   transform: translate(-20%,-45%);
+ } 
+      .hatwhite{
+        position:relative ;
+        background-color:none;
+        width:100px;
+        height:100px ;
+        transform: translate(25%,60%);
+     }
+     
+   .rombo1{
+     transform: translate(35%,60%)scale(0.5);
+     background-color:none;
+     Width :100px ;
+     height: 100px ;
+     animation: up 1s 1s linear infinite ;
+   }
+   .rombo2{
+     transform: translate(35%,60%)scale(0.5);
+     background-color:none;
+     Width :100px ;
+     height: 100px ;
+     animation: up 2s 2s linear infinite ;
+   }
+   .rombo3{
+     transform: translate(35%,60%)scale(0.5);
+     background-color:none;
+     Width :100px ;
+     height: 100px ;
+     animation: up 3s 3s linear infinite ;
+   }
+   .rombo4{
+     transform: translate(35%,60%)scale(0.5);
+     background-color:none;
+     Width :100px ;
+     height: 100px ;
+     animation: up 4s 4s linear infinite ;
+   }
+    .rombo5{
+     transform: translate(35%,60%)scale(0.5);
+     background-color:none;
+     Width :100px ;
+     height: 100px ;
+     animation:up 5s 5s linear infinite ;
+   }
+    .rombo6{
+     transform: translate(35%,60%)scale(0.5);
+     background-color:none;
+     Width :100px ;
+     height: 100px ;
+     animation: up 6s 6s linear infinite ;
+   }
+     @keyframes upleft{
+     from {transform: translate(35%,60%)scale(0.5);} 
+     50%  {transform: translate(35%,10%)scale(0.5);} 
+     to   {transform: translate(-300%,-300%)scale(0.25);} 
+   } 
+      @keyframes up{
+     from{transform: translate(35%,60%)scale(0.5);} 
+     50% {transform: translate(35%,10%)scale(0.5);} 
+     to  {transform: translate(35%,-300%)scale(0.25);} 
+   } 
+      @keyframes upright{
+     from{transform: translate(35%,60%)scale(0.5);} 
+     50% {transform: translate(35%,10%)scale(0.5);} 
+     to  {transform: translate(300%,-300%)scale(0.25);} 
+   } 
+  </style>
+  </head>
+  
+  <body>
+
+    <marquee class="marquesina" scrollamount="5"bgcolor="yellow">
+    <svg class="hatblack">
+    <g>
+    <path transform="translate(0,0)"
+      d="M0,5 100,5 75,12.5 75,95 25,95 25,12.5 0,5"
+      style="stroke:white;
+             stroke-width:5;
+             fill:black;
+             "
+    /> 
+     <path transform="translate(0,0)"
+      d="M105,5 105,95 195,95"
+      style="stroke:red;
+             stroke-width:10;
+             fill:none;
+             "
+    /> 
+     <path transform="translate(0,0)"
+      d="M205,5 295,5 M205,50 295,50 M205,5 205,95 295,95"
+      style="stroke:green;
+             stroke-width:10;
+             fill:none;
+             "
+    />  <path transform="translate(0,0)"
+      d="M305,5 305,95 395,95 395,5 z"
+      style="stroke:blue;
+             stroke-width:10;
+             fill:none;
+             "
+    /> 
+    </g>
+    </svg>
+    </marquee>
+   
+<svg class="magichat">
+    
+    <g>
+    <path class="rombo1"transform="translate(100,50)scale(0.5)"
+      d="M50,5 5,50 50,95 95,50 z"
+      style="stroke:black;
+             stroke-width:5;
+             fill:red;
+             "
+    /></g>
+    
+    <g>
+    <path class="rombo2"transform="translate(100,40)scale(0.5)"
+      d="M50,5 5,50 50,95 95,50 z"
+      style="stroke:black;
+             stroke-width:5;
+             fill:red;
+             "
+    /></g>
+    
+    <g>
+    <path class="rombo3"transform="translate(100,30)scale(0.5)"
+      d="M50,5 5,50 50,95 95,50 z"
+      style="stroke:black;
+             stroke-width:5;
+             fill:red;
+             "
+    /></g>
+     
+    <g>
+    <path class="rombo4"transform="translate(100,20)scale(0.5)"
+      d="M50,5 5,50 50,95 95,50 z"
+      style="stroke:black;
+             stroke-width:5;
+             fill:red;
+             "
+    /></g>
+     
+    <g>
+    <path class="rombo5"transform="translate(100,10)scale(0.5)"
+      d="M50,5 5,50 50,95 95,50 z"
+      style="stroke:black;
+             stroke-width:5;
+             fill:red;
+             "
+    /></g>
+     
+    <g>
+    <path class="rombo6"transform="translate(100,0)scale(0.5)"
+      d="M50,5 5,50 50,95 95,50 z"
+      style="stroke:black;
+             stroke-width:5;
+             fill:red;
+             "
+    /></g>
+    
+        
+    <g>
+    <path class="hatwhite"transform="translate(75,150)"
+      d="M0,5 100,5 75,12.5 75,95 25,95 25,12.5 0,5"
+      style="stroke:black;
+             stroke-width:5;
+             fill:white;
+             "
+    /></g>
+</svg>
+
+  </body>
+</html> 

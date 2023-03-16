@@ -1,0 +1,89 @@
+<html>
+  <head>
+    <title>star path</title>
+    <style>
+    body{background-color: rgb(0,100,0);} 
+    
+   .star{animation:tothecenter 10s 5s steps(30),spin 10s 15s linear infinite;
+         background-color:none;
+         animation-direction:alternate;
+          }
+   .estrellita{animation:3s 3s infinite;} 
+   .amarillo{animation:amarillomove 2s 2s infinite;}
+   
+   .square{position:relative ;}
+   @keyframes tothecenter{
+     0%  {transform:translate(0%,0%)}
+     100%{transform:translate(0%,30%);} 
+   } 
+   @keyframes spin{
+  from {transform-origin: 50% 50%;transform:translate(0%,30%);}
+  to {transform:translate(0%,30%)rotate(-360deg);}
+   } 
+   @keyframes amarillomove{
+     from{transform:translate(0%,0%);} 
+     50% {transform:translate(0%,-60%);} 
+     to  {transform:translate(0%,0%);}
+   } 
+     @keyframes estrellitamove{
+     from{transform:translate(0%,0%);} 
+     50% {transform:translate(20%,-50%)scale(0.125);} 
+     to  {transform:translate(0%,0%);}
+   } 
+    </style>
+  </head>
+  <body>
+      
+ <svg class="star" height="400" width="400">
+      <svg class="rojote" width="400" height="400" >
+      <circle cx="200" cy="200" r="150" fill="red" />
+      </svg>
+<g fill="none" transform="translate(100,100)">
+   <path class="estrellita"
+         d="M100,0 125,50 200,0 150,100 200,200 100,130 0,200 50,100 0,0 75,50 z"
+         style="stroke:blue;
+                stroke-width:10;
+                fill:white;"
+    />
+ </g>
+    <svg x="0" y="0" width="300" height="300">
+  <circle class="amarillo" cx="200" cy="200" r="12.5" fill="yellow " />
+</svg>
+    </svg>
+    <svg class="square" width=" 400px" height=" 400px" viewBox="0 0 400 400">
+    <g fill="red"transform="translate(0,0)">
+     <path class="cuadrado"
+           d="M5,5 95,5 95,95 5,95 Z" 
+           transform="rotate(0 50 50)scale(4)"
+           style="stroke:black;
+                  stroke-width:5px;
+                  fill:;
+                  "/>
+     <path class="rombo"
+            d="M200,100 350,200 200,300 50,200 Z"
+            style="stroke:black;
+                  stroke-width:20px;
+                  fill:white;
+                  "/>
+       <path d="M200,100 350,200 200,300 50,200 Z"
+             style="stroke:none;
+                    stroke-width:5px;
+                    fill:black;
+                  ">
+         <animate attributeName="d" 
+         values="M200,100 350,200 200,300 50,200 Z;
+                 M200,100 350,200 200,300 50,200 Z;
+                 M200,100 350,200 200,300 50,200 Z;
+                 M200,100 200,200 200,300 200,200 Z;
+                 M200,100 200,200 200,300 200,200 Z;
+                 M200,100 200,200 200,300 200,200 Z;
+                 M200,100 200,200 200,300 200,200 Z;
+                 M200,100 350,200 200,300 50,200 Z"
+         dur="32s"  begin="10s" repeatCount="indefinite"
+         />
+        </path>
+    </g>
+   </svg> 
+
+  </body>
+</html> 
