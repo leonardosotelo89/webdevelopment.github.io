@@ -1,0 +1,159 @@
+<html>
+  <style>
+  *{margin:0px;padding:0px;} 
+    body{background:linear-gradient(to top, peru 5%,lawngreen 10%,deepskyblue 95%,white);
+         color: white;
+         font-size: 30px;
+         font-weight: bold;
+    } 
+    #lienzo{
+      position: relative ;
+      width: 100%;
+      height: 100%;
+      background-color: black;
+    } 
+  </style>
+  <body>
+    <div id="lienzo">
+<marquee>
+  Elizabeth Tapia
+</marquee>
+<svg class="flor" width="300px" height="600px">
+  <g fill="none" transform="translate(0,0)">
+  <Path class="flower" 
+        d="M140,400 140,200 160,200 160,400
+           Z" 
+        Style="stroke:black;
+               Stroke-width:1px;
+               Fill:olive;
+        "/>
+     </g>
+     <g fill="none" 
+         transform="translate(0,25)">
+  <Path class="hoja right" 
+        d="M160,250 C200,230 215,245 260,250 215,255 200,280 160,260 Z" 
+        Style="stroke:black;
+               Stroke-width:1px;
+               Fill:green; "/>
+     </g>
+     <g fill="none" 
+         transform="translate(240,425)">
+  <Path class="hoja left" 
+        d="M160,250 C200,230 215,245 260,250 215,255 200,280 160,260 Z" 
+        Transform="rotate(170 50 50)
+                   scale(1)"
+        Style="stroke:black;
+               Stroke-width:1px;
+               Fill:green; "/>
+     </g>
+      <g fill="none" 
+         transform="translate(0,-55)">
+  <Path class="petalo 1" 
+        d="M160,250 C200,230 215,245 260,250 215,255 200,280 160,260 Z" 
+        Transform="rotate(0 50 50)
+                   scale(1)"
+        Style="stroke:white;
+               Stroke-width:2px;
+               Fill:purple; "/>
+     </g>
+     <g fill="none" 
+         transform="translate(175,-65)">
+  <Path class="petalo 2" 
+        d="M160,250 C200,230 215,245 260,250 215,255 200,280 160,260 Z"
+        Transform="rotate(45 50 50)
+                   scale(1)"
+        Style="stroke:white ;
+               Stroke-width:2px;
+               Fill:purple; "/>
+     </g>
+     <g fill="none" 
+         transform="translate(305,45)">
+  <Path class="petalo 3" 
+        d="M160,250 C200,230 215,245 260,250 215,255 200,280 160,260 Z" 
+        Transform="rotate(90 50 50)
+                   scale(1)"
+        Style="stroke:white ;
+               Stroke-width:2px;
+               Fill:purple; "/>
+     </g>
+     <g fill="none" 
+         transform="translate(315,220)">
+  <Path class="petalo 4" 
+        d="M160,250 C200,230 215,245 260,250 215,255 200,280 160,260 Z" 
+        Transform="rotate(135 50 50)
+                   scale(1)"
+        Style="stroke:white;
+               Stroke-width:2px;
+               Fill:purple; "/>
+     </g>
+     <g fill="none" 
+         transform="translate(200,350)">
+  <Path class="petalo 5" 
+        d="M160,250 C200,230 215,245 260,250 215,255 200,280 160,260 Z" 
+        Transform="rotate(180 50 50)
+                   scale(1)"
+        Style="stroke:white;
+               Stroke-width:2px;
+               Fill:purple; "/>
+     </g>
+     <g fill="none" 
+         transform="translate(25,360)">
+  <Path class="petalo 6" 
+        d="M160,250 C200,230 215,245 260,250 215,255 200,280 160,260 Z" 
+        Transform="rotate(225 50 50)
+                   scale(1)"
+        Style="stroke:white ;
+               Stroke-width:2px;
+               Fill:purple; "/>
+     </g>
+     <g fill="none" 
+         transform="translate(-105,250)">
+  <Path class="petalo 7" 
+        d="M160,250 C200,230 215,245 260,250 215,255 200,280 160,260 Z" 
+        Transform="rotate(270 50 50)
+                   scale(1)"
+        Style="stroke:white ;
+               Stroke-width:2px;
+               Fill:purple; "/>
+     </g>
+     <g fill="none" 
+         transform="translate(-110,70)">
+  <Path class="petalo 8" 
+        d="M160,250 C200,230 215,245 260,250 215,255 200,280 160,260 Z" 
+        Transform="rotate(315 50 50)
+                   scale(1)"
+        Style="stroke:white;
+               Stroke-width:2px;
+               Fill:purple; "/>
+     </g>
+     
+     
+     <circle class="amarillo" 
+     cx="150" cy="200" r="20px"
+     Stroke="white" fill="yellow "
+     />
+     <g fill="none" 
+         transform="translate(0,0)">
+  <Path class="maceta" 
+        d="M50,400 250,400 250,425 50,425   Z
+           M240,425 210,550 90,550 60,425 
+           Z" 
+        Style="stroke:black;
+               Stroke-width:2px;
+               Fill:peru; "/>
+     </g>
+</svg>
+
+
+
+</div>
+  </body>
+  <script>
+    const lienzo = document.getElementById('lienzo');
+    function autocolor(){
+      lienzo.style.backgroundColor = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`;
+      setTimeout(autocolor, 1000)
+    };
+    autocolor();
+  </script>
+</html>
